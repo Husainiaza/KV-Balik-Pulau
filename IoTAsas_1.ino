@@ -13,10 +13,7 @@
 //-----b. - ISTIHAR Sambungan nama Pin dengan Nombor Fizikal PIN ----
 //--------------------------------------------------------------------------
 
-//---Actuator and Relay  pin connection---
-
 #define sensorVoltan   34
-
 
 // ~~~~~~~~~~~~~~~~~~~~ PENTING ~~~~~~~~~~~~~~~~~~~~~~~~
 // ------ Sila edit nama atau ID ikut keperluan --------
@@ -71,9 +68,7 @@ void messageReceived(String &topic, String &payload) {
   //==============================================================
 
   //==========================Relay Control ========================
-  
-
-  
+    
   
   //   ----Tulis Kod Kawalan ( subsribe here ) -------
 
@@ -88,26 +83,15 @@ void messageReceived(String &topic, String &payload) {
 //-------------------------------------------------------------------
 
 void setup() {
-  
-
+ 
   Serial.begin(115200); // initialize serial
-/*
-  if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) { // Address 0x3D for 128x64
-    Serial.println(F("SSD1306 allocation failed"));
-    for(;;);
-  } */
-
   WiFi.begin(ssid, pass);
 
   client.begin(NamaBroker, net);
   client.onMessage(messageReceived);
-
-
   connect();
-
 }
 //##################  Seksyen 2 - TAMAT #############################
-
 
 //==============  Seksyen 3 - Fungsi Utama (LOOP) ===================
 //-------------------------------------------------------------------
@@ -124,7 +108,7 @@ void loop() {
   if (millis() - lastMillis > 5000) {
   lastMillis = millis();
 
-    //------SENSOR 1-------------------------------------------------------------
+  //------SENSOR 1-------------------------------------------------------------
     
     
  //-----------end ----------------------------------
@@ -132,3 +116,4 @@ void loop() {
 }
 
 //##################  Seksyen 3 - TAMAT #############################
+
