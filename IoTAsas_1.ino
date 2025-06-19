@@ -73,10 +73,7 @@ void messageReceived(String &topic, String &payload) {
   //   ----Tulis Kod Kawalan ( subsribe here ) -------
 
   //--------------------------- Relay Control --------------------
-
-
 }
-
 
 //###################################################
 //==================  Seksyen 2 - Fungsi Setup ======================
